@@ -28,8 +28,6 @@ app.get('/', function (req, res) {
     res.render('index');
 });
 
-// Handle file uploads and multipart data
-
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
