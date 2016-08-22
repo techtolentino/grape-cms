@@ -12,6 +12,8 @@ var multer = require('multer');
 var upload = multer({ dest: './public/images/uploads' });
 var flash = require('connect-flash');
 var exphbs  = require('express-handlebars');
+var yfm = require('yfm');
+var _ = require('underscore');
 
 var app = express();
 
@@ -22,7 +24,6 @@ app.engine('.hbs', exphbs({
     extname: '.hbs'
 }));
 app.set('view engine', '.hbs');
-
 
 app.get('/', function (req, res) {
     res.render('index');
@@ -76,7 +77,6 @@ app.use(function(req, res, next){
     next();
 });
 
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
@@ -85,7 +85,6 @@ app.use(function(req, res, next) {
 });
 
 // error handlers
-
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
