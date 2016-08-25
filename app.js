@@ -1,19 +1,17 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var expressValidator = require('express-validator');
-var cookieParser = require('cookie-parser');
-var session = require('express-session');
-var bodyParser = require('body-parser');
-var mongo = require('mongodb');
-var db = require('monk')('localhost/nodeblog');
-var multer = require('multer');
-var upload = multer({dest: './public/images/upload'});
-var flash = require('connect-flash');
-
-var routes = require('./routes/index');
-var posts = require('./routes/posts');
+var express = require('express'),
+    path = require('path'),
+    favicon = require('serve-favicon'),
+    logger = require('morgan'),
+    expressValidator = require('express-validator'),
+    cookieParser = require('cookie-parser'),
+    session = require('express-session'),
+    bodyParser = require('body-parser'),
+    mongo = require('mongodb'),
+    db = require('monk')('localhost/nodeblog'),
+    flash = require('connect-flash'),
+    util = require('util'),
+    routes = require('./routes/index'),
+    posts = require('./routes/posts');
 
 var app = express();
 
@@ -28,15 +26,6 @@ app.set('view engine', 'jade');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
-
-// Express session
-app.use(session({
-    secret: 'secret',
-    saveUninitialized: true,
-    resave: true
-}));
-
 // Express validator
 app.use(expressValidator({
     errorFormatter: function(param, msg, value){
@@ -55,6 +44,16 @@ app.use(expressValidator({
         };
     }
 }));
+
+app.use(cookieParser());
+
+// Express session
+app.use(session({
+    secret: 'secret',
+    saveUninitialized: true,
+    resave: true
+}));
+
 
 app.use(express.static(path.join(__dirname, 'public')));
 

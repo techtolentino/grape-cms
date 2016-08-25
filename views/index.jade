@@ -8,8 +8,6 @@ block content
                     a(href='/posts/show/#{post._id}')
                         =post.title
                 p.meta Posted in #{post.category} on #{moment(post.date).format("MM-DD-YYYY")}
-                =post.body
-                p
-                    a.more(href='/posts/show/#{post._id}') Read More
+                !=post.body
         else
             p There are no Lines to display

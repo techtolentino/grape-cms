@@ -12,7 +12,6 @@ router.get('/create', function(req, res, next){
             "categories": categories
         })
     })
-
 });
 
 router.post('/create', function(req, res, next) {
@@ -23,13 +22,14 @@ router.post('/create', function(req, res, next) {
     var date = new Date();
 
     req.checkBody('title', 'Title is required').notEmpty();
-    req.checkBody('body', 'Body is required');
+    req.checkBody('body', 'Body is required').notEmpty();
 
     var errors = req.validationErrors();
         if(errors) {
             res.render('create', {
                 "errors": errors,
                 "title": title,
+                "category": category,
                 "body": body
             });
         } else {
@@ -42,11 +42,12 @@ router.post('/create', function(req, res, next) {
                 "date": date
             }, function(err, post) {
                 if(err) {
-                    res.send('There was an issue submitting the new Line')
+                    res.send('There have been validation errors: ' + util.inspect(errors), 400);
+                    return;
                 } else {
                     req.flash('success', 'New Line submitted');
                     res.location('/');
-                    res.redirect('/')
+                    res.redirect('/');
                 }
             })
         }
