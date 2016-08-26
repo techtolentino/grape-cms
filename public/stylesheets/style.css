@@ -1,11 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
 .container {
   width: 90%;
   max-width: 50em;
   display: block;
   margin: 0 auto; }
 
+.form-group {
+  padding-bottom: 2em; }
+
+.form-title {
+  width: 100%;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  font-size: 2em; }
+
+.form label {
+  display: block;
+  padding-bottom: 1em; }
+
 body {
-  padding: 50px;
   font: 16px "Lucida Grande", Helvetica, Arial, sans-serif; }
 
 a {

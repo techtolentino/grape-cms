@@ -1,7 +1,9 @@
+@import 'config';
+@import 'reset';
 @import 'container';
+@import 'form';
 
 body {
-  padding: 50px;
   font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
