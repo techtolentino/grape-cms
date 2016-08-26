@@ -2,6 +2,7 @@ extends layout
 
 block content
     h1
+        - console.log(posts, "<<<<<<<<<<<<<<<<")
         if posts
             each post, i in posts
                 h1
