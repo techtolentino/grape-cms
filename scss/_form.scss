@@ -1,0 +1,19 @@
+.form {
+    &-group {
+        padding-bottom: $base-spacing-unit;
+    }
+
+    &-title {
+        width: 100%;
+        padding-top: $base-spacing-unit / 4;
+        padding-bottom: $base-spacing-unit / 4;
+        padding-left: $base-spacing-unit / 4;
+        padding-right: $base-spacing-unit / 4;
+        font-size: 2em;
+    }
+
+    label {
+        display: block;
+        padding-bottom: $base-spacing-unit / 2;
+    }
+}
