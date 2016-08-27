@@ -3,18 +3,18 @@ var router = express.Router();
 var mongo = require('mongodb');
 var db = require('monk')('localhost/nodeblog');
 
-router.get('/create', function(req, res, next){
+router.get('/add-line', function(req, res, next){
     var categories = db.get('categories');
 
     categories.find({}, {}, function(err, categories){
-        res.render('create', {
+        res.render('add-line', {
             "title": 'New Line',
             "categories": categories
         })
     })
 });
 
-router.post('/create', function(req, res, next) {
+router.post('/add-line', function(req, res, next) {
     // get new line values
     var title = req.body.title;
     var category = req.body.category;
@@ -26,7 +26,7 @@ router.post('/create', function(req, res, next) {
 
     var errors = req.validationErrors();
         if(errors) {
-            res.render('create', {
+            res.render('add-line', {
                 "errors": errors,
                 "title": title,
                 "category": category,

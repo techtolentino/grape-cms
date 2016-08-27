@@ -5,12 +5,15 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     .container
-        nav
-            ul
-                li
-                    a(href="/") Home
-                li
-                    a(href="/posts/create") Add Post
-                li
-                    a(href="/posts/categories") Add Category
-        block content
+        .band
+            .navigation
+                nav
+                    ul.navigation-list
+                        li.navigation-list-item
+                            a(href="/") Home
+                        li.navigation-list-item
+                            a(href="/posts/add-line") Add Post
+                        li.navigation-list-item
+                            a(href="/categories/add-category") Add Category
+        .band
+            block content

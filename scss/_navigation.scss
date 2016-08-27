@@ -1,0 +1,13 @@
+.navigation {
+    &-list {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    &-list-item {
+        display: inline-block;
+        &:not(:first-child) {
+            padding-left: $base-spacing-unit / 2;
+        }
+    }
+}

@@ -1,12 +1,12 @@
-@import 'config';
 @import 'reset';
+@import 'config';
+@import 'functions';
+@import 'base';
+
+@import 'band';
 @import 'container';
 @import 'form';
+@import 'navigation';
+@import 'post';
+@import 'typography';
 
-body {
-  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
-}

@@ -10,11 +10,10 @@ block content
     form.form(method='post', action='/posts/create')
         .form-group
             label Title:
-            input.form-title(name='title', type='text')
+            input.form-title(name='title', type='text', placeholder="enter a title")
         .form-group
             label Category
             select.form-control(name='category')
-                - console.log(categories.length)
                 each category, i in categories
                     option(value='#{category.title}') #{category.title}
         .form-group

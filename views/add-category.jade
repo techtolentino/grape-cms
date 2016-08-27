@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    h1=title
+    ul.errors
+        if errors
+            each error, i in errors
+                li.alert #{error.msg}
+
+    form.form(method='post', action='/categories/add-category')
+        .form-group
+            label Title:
+            input.form-title(name='title', type='text', placeholder="enter a category")
+        input.form-button(name='submit', type='submit', value='Save')

@@ -1,2 +1,24 @@
+// Base variables
+$base-font-family: 'Assistant', sans-serif;
+$base-font-size:   1em;
+$base-font-weight: 300;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.65;
+
+// Spacing
 $base-spacing-unit: 2em;
-$base-font-size: 16px;
+
+// Colors
+$text-color: #525252;
+$background-color: #F7F7F7;
+$accent-color: #2E10FF;
+$cool-color: #2FB6B5;
+$gray-color: #D7D8E0;
+$black-color: #040404;
+
+// Width of the content area
+$extra-extra-large-screen: 90em;
+$extra-large-screen: 68em;
+$large-screen: 50em;
+$medium-screen: 48em;
+$small-screen: 30em;

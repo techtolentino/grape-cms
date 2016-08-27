@@ -12,6 +12,7 @@ var express = require('express'),
     util = require('util'),
     routes = require('./routes/index'),
     posts = require('./routes/posts');
+    categories = require('./routes/categories');
 
 var app = express();
 
@@ -72,6 +73,7 @@ app.use(function(req, res, next) {
 
 app.use('/', routes);
 app.use('/posts', posts);
+app.use('/categories', categories);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

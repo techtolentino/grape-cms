@@ -1,0 +1,15 @@
+.post {
+    &-list {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    &-list-item {
+        padding-bottom: $base-spacing-unit / 2;
+    }
+
+    &-meta {
+        color: darken($gray-color, 20%);
+        font-size: .75em;
+    }
+}

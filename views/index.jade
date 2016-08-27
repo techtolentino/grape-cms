@@ -1,13 +1,16 @@
 extends layout
 
 block content
-    h1
-        if posts
-            each post, i in posts
-                h1
-                    a(href='/posts/show/#{post._id}')
-                        =post.title
-                p.meta Posted in #{post.category} on #{moment(post.date).format("MM-DD-YYYY")}
-                !=post.body
-        else
-            p There are no Lines to display
+    h1 Lines
+    .post
+        ul.post-list
+            if posts
+                each post, i in posts
+                        li.post-list-item
+                            h4
+                                a.link-base(href='/posts/show/#{post._id}')
+                                    =post.title
+                            p.post-meta Posted in #{post.category} on #{moment(post.date).format("MM-DD-YYYY")}
+                            p!=post.body
+            else
+                p There are no Lines to display

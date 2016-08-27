@@ -1,0 +1,130 @@
+h1 {
+    font-size: 3.157em;
+    font-weight: 600;
+    margin-top: 0;
+    line-height: 1.4;
+}
+
+h2 {
+    font-size: 2.369em;
+    font-weight: 200;
+    margin-top: 0;
+    letter-spacing: -1px;
+}
+
+h3 {
+    font-size: 1.777em;
+    font-weight: 400;
+    margin-bottom: $base-spacing-unit / 4;
+}
+
+h4 {
+    font-size: 1.333em;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+h5 {
+    font-size: 1.20em;
+    font-weight: 200;
+    margin-top: 0;
+}
+
+small,
+.font_small {
+    font-size: 0.75em;
+}
+
+p {
+    margin-bottom: 1.3em;
+}
+
+ol {
+    margin-bottom: 1.777em;
+}
+
+ul {
+    padding-left: 2em;
+}
+
+pre {
+    background: lighten($gray-color, 5%);
+}
+
+sup {
+    z-index: -1;
+}
+
+figcaption {
+    font-size: .875em;
+    color: darken($gray-color, 10%);
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: $base-spacing-unit;
+    margin-top: -1em;
+}
+
+.link {
+
+    &-base {
+        color: $text-color;
+        transition: color .15s;
+        text-decoration: none;
+
+        &:hover {
+            color: darken($text-color, 20%);
+            border-bottom: 1px solid currentColor;
+            transition: color .15s, border-bottom .15s;
+        }
+    }
+
+    &--warm {
+        color: $accent-color;
+        transition: color .15s;
+        text-decoration: none;
+        font-weight: 300;
+
+        &:hover {
+         color: darken($accent-color, 20%);
+         border-bottom: 1px solid currentColor;
+         transition: color .15s, border-bottom .15s;
+        }
+    }
+}
+
+@include media-query($medium-screen) {
+    h1 {
+        font-size: 2.369em;
+    }
+
+    h2 {
+        font-size: 1.777em;
+    }
+
+    h3 {
+        font-size: 1.333em;
+    }
+
+    h4 {
+        font-size: 1.15em;
+    }
+}
+
+
+@include media-query($small-screen) {
+    h1 {
+        font-size: 1.777em;
+    }
+
+    h2 {
+        font-size: 1.333em;
+    }
+
+    h3 {
+        font-size: 1.20em;
+    }
+
+    h4 {
+        font-size: 1.10em;
+    }
+}

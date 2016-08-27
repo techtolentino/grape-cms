@@ -1,0 +1,23 @@
+body {
+    font-family: $base-font-family;
+    font-size: $base-font-size * 1.25;
+    font-weight: $base-font-weight;
+    color: $text-color;
+    background: $background-color;
+    line-height: $base-line-height + .15;
+}
+
+@include media-query($extra-extra-large-screen) {
+    body {
+        font-size: $base-font-size * 1.15;
+        line-height: $base-line-height;
+    }
+}
+
+@include media-query($small-screen) {
+    body {
+        font-size: $base-font-size;
+        line-height: $base-line-height - .1;
+    }
+}
+

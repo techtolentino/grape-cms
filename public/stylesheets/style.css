@@ -3,6 +3,28 @@
   margin: 0;
   padding: 0; }
 
+body {
+  font-family: "Assistant", sans-serif;
+  font-size: 1.25em;
+  font-weight: 300;
+  color: #525252;
+  background: #F7F7F7;
+  line-height: 1.8; }
+
+@media screen and (max-width: 90em) {
+  body {
+    font-size: 1.15em;
+    line-height: 1.65; } }
+
+@media screen and (max-width: 30em) {
+  body {
+    font-size: 1em;
+    line-height: 1.55; } }
+
+.band {
+  padding-top: 2em;
+  padding-bottom: 2em; }
+
 .container {
   width: 90%;
   max-width: 50em;
@@ -24,8 +46,115 @@
   display: block;
   padding-bottom: 1em; }
 
-body {
-  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif; }
+.navigation-list {
+  list-style-type: none;
+  padding-left: 0; }
 
-a {
-  color: #00B7FF; }
+.navigation-list-item {
+  display: inline-block; }
+  .navigation-list-item:not(:first-child) {
+    padding-left: 1em; }
+
+.post-list {
+  list-style-type: none;
+  padding-left: 0; }
+
+.post-list-item {
+  padding-bottom: 1em; }
+
+.post-meta {
+  color: #9ea0b3;
+  font-size: .75em; }
+
+h1 {
+  font-size: 3.157em;
+  font-weight: 600;
+  margin-top: 0;
+  line-height: 1.4; }
+
+h2 {
+  font-size: 2.369em;
+  font-weight: 200;
+  margin-top: 0;
+  letter-spacing: -1px; }
+
+h3 {
+  font-size: 1.777em;
+  font-weight: 400;
+  margin-bottom: 0.5em; }
+
+h4 {
+  font-size: 1.333em;
+  font-weight: 400;
+  margin-top: 0; }
+
+h5 {
+  font-size: 1.20em;
+  font-weight: 200;
+  margin-top: 0; }
+
+small,
+.font_small {
+  font-size: 0.75em; }
+
+p {
+  margin-bottom: 1.3em; }
+
+ol {
+  margin-bottom: 1.777em; }
+
+ul {
+  padding-left: 2em; }
+
+pre {
+  background: #e5e6eb; }
+
+sup {
+  z-index: -1; }
+
+figcaption {
+  font-size: .875em;
+  color: #babcca;
+  font-style: italic;
+  font-weight: 300;
+  margin-bottom: 2em;
+  margin-top: -1em; }
+
+.link-base {
+  color: #525252;
+  transition: color .15s;
+  text-decoration: none; }
+  .link-base:hover {
+    color: #1f1f1f;
+    border-bottom: 1px solid currentColor;
+    transition: color .15s, border-bottom .15s; }
+
+.link--warm {
+  color: #2E10FF;
+  transition: color .15s;
+  text-decoration: none;
+  font-weight: 300; }
+  .link--warm:hover {
+    color: #1500a9;
+    border-bottom: 1px solid currentColor;
+    transition: color .15s, border-bottom .15s; }
+
+@media screen and (max-width: 48em) {
+  h1 {
+    font-size: 2.369em; }
+  h2 {
+    font-size: 1.777em; }
+  h3 {
+    font-size: 1.333em; }
+  h4 {
+    font-size: 1.15em; } }
+
+@media screen and (max-width: 30em) {
+  h1 {
+    font-size: 1.777em; }
+  h2 {
+    font-size: 1.333em; }
+  h3 {
+    font-size: 1.20em; }
+  h4 {
+    font-size: 1.10em; } }
