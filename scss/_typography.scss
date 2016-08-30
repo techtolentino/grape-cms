@@ -73,7 +73,7 @@ figcaption {
 
         &:hover {
             color: darken($text-color, 20%);
-            border-bottom: 1px solid currentColor;
+            border-bottom: 1px solid $accent-color;
             transition: color .15s, border-bottom .15s;
         }
     }

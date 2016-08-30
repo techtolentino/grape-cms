@@ -1,13 +1,13 @@
 extends layout
 
 block content
-    h1 Lines
+    h1.page-title Lines
     .post
         ul.post-list
             if posts
                 each post, i in posts
                         li.post-list-item
-                            h4
+                            h3
                                 a.link-base(href='/posts/show/#{post._id}')
                                     =post.title
                             p.post-meta Posted in #{post.category} on #{moment(post.date).format("MM-DD-YYYY")}

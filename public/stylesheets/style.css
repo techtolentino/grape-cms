@@ -13,7 +13,7 @@ body {
 
 @media screen and (max-width: 90em) {
   body {
-    font-size: 1.15em;
+    font-size: 1.05em;
     line-height: 1.65; } }
 
 @media screen and (max-width: 30em) {
@@ -55,12 +55,15 @@ body {
   .navigation-list-item:not(:first-child) {
     padding-left: 1em; }
 
+.page-title {
+  padding-bottom: 1em; }
+
 .post-list {
   list-style-type: none;
   padding-left: 0; }
 
 .post-list-item {
-  padding-bottom: 1em; }
+  padding-bottom: 2em; }
 
 .post-meta {
   color: #9ea0b3;
@@ -126,7 +129,7 @@ figcaption {
   text-decoration: none; }
   .link-base:hover {
     color: #1f1f1f;
-    border-bottom: 1px solid currentColor;
+    border-bottom: 1px solid #2E10FF;
     transition: color .15s, border-bottom .15s; }
 
 .link--warm {

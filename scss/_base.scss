@@ -9,7 +9,7 @@ body {
 
 @include media-query($extra-extra-large-screen) {
     body {
-        font-size: $base-font-size * 1.15;
+        font-size: $base-font-size * 1.05;
         line-height: $base-line-height;
     }
 }
